@@ -1,0 +1,19 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:padding="20dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="Quest ADB Bridge" android:textSize="28sp" android:textStyle="bold"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/status" android:text="NOT CONNECTED" android:textSize="20sp"
+            android:paddingTop="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/ip" android:hint="IP Address" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/pairPort" android:hint="Pairing Port" android:inputType="number"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/code" android:hint="6-digit Pairing Code" android:inputType="number"
+            android:maxLength="6" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/pair" android:text="PAIR + CONNECT"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/log" android:text="Ready." android:paddingTop="16dp"
+            android:fontFamily="monospace" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
