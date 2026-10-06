@@ -1,0 +1,17 @@
+[application]
+config/name="Quest Test Game"
+run/main_scene="res://main.tscn"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.04, 0.05, 0.08, 1)
+
+[xr]
+openxr/enabled=true
+openxr/hand_tracking=false
+openxr/foveation_level=1
