@@ -1,0 +1,25 @@
+name: Build Quest Test APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "quest-test-game/**"
+      - ".github/workflows/quest-test-game.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Godot Android APK
+        uses: firebelley/godot-export@v6.0.0
+        with:
+          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip
+          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz
+          relative_project_path: quest-test-game
+          archive_output: true
+          archive_output_path: QuestTestGame.apk
+          presets_to_export: Android
